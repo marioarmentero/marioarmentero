@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Shell.PresentationMode="ModalAnimated"
+             x:Class="aicogestnew.Views.vendorDetails"
+             xmlns:local="clr-namespace:aicogestnew.Views.Vendors_Documents">
+
+    <TabbedPage.Children>
+        
+        <local:VendorGeneralPage Title="General" IconImageSource="icon_feed.png"/>
+        <local:VendorFacturasList Title="Facturas" IconImageSource="icon_feed.png"/>
+        <local:VendorAlbaranes Title="Albaranes" IconImageSource="icon_feed.png"/>     
+    
+        
+    </TabbedPage.Children>  
+</TabbedPage>

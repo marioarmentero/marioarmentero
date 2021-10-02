@@ -5,12 +5,6 @@
        Title="aicogestnew"
        x:Class="aicogestnew.AppShell">
 
-    <!--
-        The overall app visual hierarchy is defined here, along with navigation.
-    
-        https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/
-    -->
-
     <Shell.Resources>
         <ResourceDictionary>
             <Style x:Key="BaseStyle" TargetType="Element">
@@ -73,19 +67,39 @@
         </ResourceDictionary>
     </Shell.Resources>
 
-    <!-- 
-        When the Flyout is visible this defines the content to display in the flyout.
-        FlyoutDisplayOptions="AsMultipleItems" will create a separate flyout item for each child element    
-        https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
-    -->
-    <FlyoutItem Title="About" Icon="icon_about.png">
-        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
+    <Shell.FlyoutHeader>
+        <local:FlyoutHeader />
+    </Shell.FlyoutHeader>
+    <FlyoutItem Title="About" Icon="compania.png">
+        <ShellContent Route="About" ContentTemplate="{DataTemplate local:AboutPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Mis Empresas" Icon="compania.png">
+        <ShellContent Route="Empresas" ContentTemplate="{DataTemplate local:Empresas}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Contactos" Icon="contacts.png">
+        <ShellContent Route="Contactos" ContentTemplate="{DataTemplate local:TContactos}" />
+      </FlyoutItem>
+    <FlyoutItem Title="Productos" Icon="compania.png">
+        <ShellContent Route="Empresas" ContentTemplate="{DataTemplate local:Empresas}" />
     </FlyoutItem>
     <FlyoutItem Title="Browse" Icon="icon_feed.png">
         <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" />
     </FlyoutItem>
+    <ShellItem Title="Contactos"
+           Icon="contacts.png">
+        <ShellSection>
+            <ShellContent Title="Main"
+                      Icon="icon_about.png">
+                <local:ItemsPage/>
+            </ShellContent>
+            <ShellContent Title="Secondary"
+                      Icon="icon_feed.png">
+                <local:Contactos/>
+            </ShellContent>
+            
+        </ShellSection>
+    </ShellItem>
 
-    <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
     <MenuItem Text="Logout" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
     </MenuItem>
 

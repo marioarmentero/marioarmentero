@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:aicogestnew.Views"
+            x:Class="aicogestnew.Views.TContactos">
+    <TabbedPage.Children>
+        
+        <local:PageVendors Title="Proveedores" IconImageSource="icon_feed.png"/>
+        <local:CustomerPage Title="Clientes" IconImageSource="icon_feed.png"/>
+       <local:EmployeePage Title="Empleados" IconImageSource="icon_feed.png"/>     
+    
+        
+    </TabbedPage.Children>  
+</TabbedPage>
