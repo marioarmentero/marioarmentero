@@ -5,12 +5,6 @@
              x:Class="aicogestnew.Views.vendorDetails"
              xmlns:local="clr-namespace:aicogestnew.Views.Vendors_Documents">
 
-    <TabbedPage.Children>
-        
-        <local:VendorGeneralPage Title="General" IconImageSource="icon_feed.png"/>
-        <local:VendorFacturasList Title="Facturas" IconImageSource="icon_feed.png"/>
-        <local:VendorAlbaranes Title="Albaranes" IconImageSource="icon_feed.png"/>     
-    
-        
+    <TabbedPage.Children x:name="MChild">      
     </TabbedPage.Children>  
 </TabbedPage>

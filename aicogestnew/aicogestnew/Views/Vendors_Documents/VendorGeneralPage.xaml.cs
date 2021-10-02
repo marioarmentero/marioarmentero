@@ -16,8 +16,10 @@ namespace aicogestnew.Views.Vendors_Documents
         public VendorGeneralPage()
         {
             InitializeComponent();
-            
-   
+            lblCodProv.Text = Title = ((Vendor)BindingContext).Codvendor;
+            lblNomProveedor.Text = ((Vendor)BindingContext).VendorName;
+
+
         }
     }
 }

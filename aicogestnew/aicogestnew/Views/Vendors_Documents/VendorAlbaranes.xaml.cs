@@ -1,4 +1,5 @@
-﻿using System;
+﻿using aicogestnew.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,13 @@ namespace aicogestnew.Views.Vendors_Documents
         public VendorAlbaranes()
         {
             InitializeComponent();
+
+            
+            var a = ((Vendor)Parent.BindingContext).Codvendor;
+
+           lblCodProv.Text = Title = a.ToString() ;
+           lblNomProveedor.Text = ((Vendor)BindingContext).VendorName;
         }
+        
     }
 }
