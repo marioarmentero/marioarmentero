@@ -81,24 +81,7 @@
       </FlyoutItem>
     <FlyoutItem Title="Productos" Icon="compania.png">
         <ShellContent Route="Empresas" ContentTemplate="{DataTemplate local:Empresas}" />
-    </FlyoutItem>
-    <FlyoutItem Title="Browse" Icon="icon_feed.png">
-        <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" />
-    </FlyoutItem>
-    <ShellItem Title="Contactos"
-           Icon="contacts.png">
-        <ShellSection>
-            <ShellContent Title="Main"
-                      Icon="icon_about.png">
-                <local:ItemsPage/>
-            </ShellContent>
-            <ShellContent Title="Secondary"
-                      Icon="icon_feed.png">
-                <local:Contactos/>
-            </ShellContent>
-            
-        </ShellSection>
-    </ShellItem>
+    </FlyoutItem> 
 
     <MenuItem Text="Logout" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
     </MenuItem>

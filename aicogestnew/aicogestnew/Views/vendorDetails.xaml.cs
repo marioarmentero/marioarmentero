@@ -22,11 +22,11 @@ namespace aicogestnew.Views
             _myVendor = MiVendor;
 
              VendorAlbaranes va = new VendorAlbaranes(_myVendor);
-      
+            
             Children.Add(new VendorGeneralPage(_myVendor));
             Children.Add(va);
-            Children.Add(new VendorFacturasList());
-            Children.Add(new PageVendors());
+            Children.Add(new VendorFacturasList(_myVendor));
+            //Children.Add(new PageVendors());
 
 
         }      
