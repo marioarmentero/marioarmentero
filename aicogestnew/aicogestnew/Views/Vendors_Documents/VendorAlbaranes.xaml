@@ -14,10 +14,7 @@
                 </Grid.RowDefinitions>
                 <Image Source="fondo.jpg}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="Fill" Opacity="75" />
                <StackLayout Spacing="20" Padding="15">
-                <Label Text="Cód. Provedor:" FontSize="Medium" />
-                <Label Text="" x:Name="lblCodProv" FontSize="Small"/>
-                <Label Text="Nombre Provedor::" FontSize="Medium" />
-                <Label Text="" x:Name="lblNomProveedor" FontSize="Small"/>
+                <Label Text="LISTA DE LAS ALBARANES DISPONIBLES" FontSize="Medium" />               
             </StackLayout>
         </Grid>
     </ContentPage.Content>

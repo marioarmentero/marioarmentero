@@ -31,8 +31,10 @@ namespace aicogestnew.Views
         private async void ListitemTapped(object sender, ItemTappedEventArgs e)
         {
             var itemSe = e.Item as Vendor;
-            await Navigation.PushAsync(new vendorDetails(itemSe));
-            //await Shell.Current.GoToAsync(nameof(vendorDetails));
+            await Navigation.PushAsync(new vendorDetails(itemSe),true);
+
+           // vendorDetails Ven = new vendorDetails(itemSe);
+           // await Shell.Current.GoToAsync(nameof(Ven));
         }
 
         public async Task<List<Vendor>> GetVendors()

@@ -13,15 +13,14 @@ namespace aicogestnew.Views.Vendors_Documents
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class VendorAlbaranes : ContentPage
     {
-        public VendorAlbaranes()
+        private Vendor _mvendr;
+        public VendorAlbaranes(Vendor _vendor)
         {
             InitializeComponent();
-
-            
-            var a = ((Vendor)Parent.BindingContext).Codvendor;
-
-           lblCodProv.Text = Title = a.ToString() ;
-           lblNomProveedor.Text = ((Vendor)BindingContext).VendorName;
+            _mvendr = _vendor;            
+   
+           //lblCodProv.Text = _mvendr.Codvendor;
+          // lblNomProveedor.Text = _mvendr.VendorName;
         }
         
     }

@@ -21,29 +21,18 @@ namespace aicogestnew.Views
 
             _myVendor = MiVendor;
 
-           // VendorAlbaranes va = new VendorAlbaranes();
-           // va.BindingContext = _myVendor;
-
-            Children.Add(new VendorGeneralPage());
-            Children.Add(new VendorAlbaranes());
+             VendorAlbaranes va = new VendorAlbaranes(_myVendor);
+      
+            Children.Add(new VendorGeneralPage(_myVendor));
+            Children.Add(va);
             Children.Add(new VendorFacturasList());
-            BindingContext = _myVendor;
-
-            //               < local:VendorGeneralPage Title = "General" IconImageSource = "icon_feed.png" />
-
-            //          < local:VendorFacturasList Title = "Facturas" IconImageSource = "icon_feed.png" />
-
-            //           < local:VendorAlbaranes Title = "Facturas" IconImageSource = "icon_feed.png" />
+            Children.Add(new PageVendors());
 
 
-        }
-        public void OnNavigatedTo()
-        { 
-        }
+        }      
         protected async override void OnAppearing()
         {
-            base.OnAppearing();
-            
+            base.OnAppearing();            
         }
 
 

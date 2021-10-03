@@ -13,11 +13,14 @@ namespace aicogestnew.Views.Vendors_Documents
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class VendorGeneralPage : ContentPage
     {
-        public VendorGeneralPage()
+        private Vendor _mvendr;
+        public VendorGeneralPage(Vendor _vendor)
         {
             InitializeComponent();
-            lblCodProv.Text = Title = ((Vendor)BindingContext).Codvendor;
-            lblNomProveedor.Text = ((Vendor)BindingContext).VendorName;
+            _mvendr = _vendor;
+
+            lblCodProv.Text = _mvendr.Codvendor;
+            lblNomProveedor.Text = _mvendr.VendorName;
 
 
         }
