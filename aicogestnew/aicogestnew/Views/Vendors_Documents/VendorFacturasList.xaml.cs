@@ -28,6 +28,17 @@ namespace aicogestnew.Views.Vendors_Documents
             base.OnAppearing();
             listView1.ItemsSource = await GetVendors(_mvendr.Codvendor);
             listView1.ItemTapped += ListitemTapped;
+            Button button = new Button();
+            button.Text = "Nueva Factura";
+          //  button.Clicked = Button_2_Clicked;
+            button.WidthRequest = 150.0;
+            button.HeightRequest = 50.0;
+            button.HorizontalOptions = Xamarin.Forms.LayoutOptions.Center;
+            button.VerticalOptions = Xamarin.Forms.LayoutOptions.Center;
+            //button.Color = Xamarin.Forms.Color.White;
+            Grid.SetRow(button, 0);
+            Grid.SetColumn(button, 0);
+            MainGrid.Children.Add(button);
         }
 
         private async void ListitemTapped(object sender, ItemTappedEventArgs e)
