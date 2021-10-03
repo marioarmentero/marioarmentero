@@ -80,7 +80,7 @@
         <ShellContent Route="Contactos" ContentTemplate="{DataTemplate local:TContactos}" />
       </FlyoutItem>
     <FlyoutItem Title="Productos" Icon="compania.png">
-        <ShellContent Route="Empresas" ContentTemplate="{DataTemplate local:Empresas}" />
+        <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" />
     </FlyoutItem> 
 
     <MenuItem Text="Logout" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">

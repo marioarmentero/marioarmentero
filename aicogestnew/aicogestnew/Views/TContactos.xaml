@@ -6,7 +6,7 @@
         
         <local:PageVendors Title="Proveedores" IconImageSource="icon_feed.png"/>
         <local:CustomerPage Title="Clientes" IconImageSource="icon_feed.png"/>
-       <local:EmployeePage Title="Empleados" IconImageSource="icon_feed.png"/>     
+       <local:CustomerPage Title="Empleados" IconImageSource="icon_feed.png"/>     
     
         
     </TabbedPage.Children>  
