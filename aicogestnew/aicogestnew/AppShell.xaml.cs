@@ -17,7 +17,7 @@ namespace aicogestnew
            
             Routing.RegisterRoute(nameof(Contactos), typeof(Contactos));
             Routing.RegisterRoute(nameof(vendorDetails), typeof(vendorDetails));
-            //Routing.RegisterRoute(nameof(ProductosPage), typeof(ProductosPage));
+            Routing.RegisterRoute(nameof(ListProductView), typeof(ListProductView));
         }
 
         private async void OnMenuItemClicked(object sender, EventArgs e)

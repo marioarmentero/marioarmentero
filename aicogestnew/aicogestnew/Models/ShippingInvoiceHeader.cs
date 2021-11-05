@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace aicogestnew.Models
-{  
-    public partial class ShippingHeader
+{ public class ShippingInvoiceHeader
     {
         public int Id { get; set; }
         public string No { get; set; }

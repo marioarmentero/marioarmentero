@@ -56,5 +56,10 @@ namespace aicogestnew.Services
         {
             return await Task.FromResult(items);
         }
+        
+        public Task<IEnumerable<Item>> GetProductosAsync(bool forceRefresh = false)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

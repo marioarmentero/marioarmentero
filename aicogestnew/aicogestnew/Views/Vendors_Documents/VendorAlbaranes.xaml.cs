@@ -35,13 +35,13 @@ namespace aicogestnew.Views.Vendors_Documents
         {
             var itemSe = e.Item as PurchaseHeader;    
         }
-        public async Task<List<ShippingHeader>> GetVendors(string codvendor)
+        public async Task<List<ShippingInvoiceHeader>> GetVendors(string codvendor)
         {
             {
                 var credentials = new NetworkCredential("vabowl", "P3lvmt3n");
                 var handler = new HttpClientHandler { Credentials = credentials };
                 System.Net.Http.HttpClient client = new System.Net.Http.HttpClient(handler);
-                List<ShippingHeader> Model = null;
+                List<ShippingInvoiceHeader> Model = null;
 
 
                 //string url = uro + search;
@@ -51,7 +51,7 @@ namespace aicogestnew.Views.Vendors_Documents
                 {
                     var jsonstring = await response.Content.ReadAsStringAsync();
 
-                    Model = Newtonsoft.Json.JsonConvert.DeserializeObject<List<ShippingHeader>>(jsonstring);
+                    Model = Newtonsoft.Json.JsonConvert.DeserializeObject<List<ShippingInvoiceHeader>>(jsonstring);
 
                     var albaranes = from m in Model
                                  select m;
