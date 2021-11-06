@@ -3,15 +3,30 @@
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:aicogestnew.Views"
        Title="Aicoffi"
-       x:Class="aicogestnew.AppShell">  
+       x:Class="aicogestnew.AppShell">
+    <Shell.FlyoutHeader>
+        <local:FlyoutHeader/>
+    </Shell.FlyoutHeader>
     <TabBar>        
         <Tab Title="Home"
             Icon="inicio.png">
-            <ShellContent Title="Home" ContentTemplate="{DataTemplate local:HomePage}" />
+            <ShellContent Title="Home" ContentTemplate="{DataTemplate local:HomePage}" Shell.TabBarBackgroundColor="#306eb5" Shell.TabBarTitleColor="Yellow" />
         </Tab>
         <Tab Title="Ventas"
             Icon="ventas.png">
-            <ShellContent Title="Ventas" ContentTemplate="{DataTemplate local:Empresas}" />
+            <ShellContent Title="Ventas" ContentTemplate="{DataTemplate local:Empresas}" Shell.TabBarBackgroundColor="#306eb5" Shell.TabBarTitleColor="Yellow" />
+        </Tab>
+        <Tab Title="Gastos"
+            Icon="gastos.png">
+            <ShellContent Title="Gastos" ContentTemplate="{DataTemplate local:Empresas}" Shell.TabBarBackgroundColor="#306eb5" Shell.TabBarTitleColor="Yellow"  />
+        </Tab>
+        <Tab Title="Contacto"
+            Icon="contactos.png">
+            <ShellContent Title="Contactos" ContentTemplate="{DataTemplate local:Empresas}" Shell.TabBarBackgroundColor="#306eb5" Shell.TabBarTitleColor="Yellow"  />
+        </Tab>
+        <Tab Title="Más"
+            Icon="mas.png">
+            <ShellContent Title="Más" ContentTemplate="{DataTemplate local:Empresas}" Shell.TabBarBackgroundColor="#306eb5" Shell.TabBarForegroundColor="Yellow"  />
         </Tab>
     </TabBar>
 

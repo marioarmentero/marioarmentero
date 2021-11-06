@@ -15,6 +15,9 @@ namespace aicogestnew.Views
         public HomePage()
         {
             InitializeComponent();
+    
+
+            BindingContext = new ViewModel.DisplayChartViewModel();
         }
     }
 }

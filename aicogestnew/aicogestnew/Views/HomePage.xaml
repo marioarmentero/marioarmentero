@@ -1,12 +1,125 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="aicogestnew.Views.HomePage">
+             x:Class="aicogestnew.Views.HomePage"
+             xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid Padding="5, 10, 10, 10" BackgroundColor="#c1b7b4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Frame Grid.Row="0" Padding="0, 10, 10, 0" BackgroundColor="#c7bdba" CornerRadius="20">
+                <StackLayout>
+                    <Grid Padding="0, 0, 0, 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="80"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60"/>
+                        </Grid.RowDefinitions>
+                        <ImageButton Grid.Column="0" WidthRequest="60" BackgroundColor="Transparent" Source="vabowlico.png"                                      
+                   VerticalOptions="Center"
+                    HorizontalOptions="Start">
+                        </ImageButton>
+
+                        <Label  x:Name="l2" Padding="10,0,0,0" Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center"  Text="Vabowl Fanny Foods Sl." BackgroundColor="#c7bdba" FontFamily="Century Gothic.TTF" FontSize="20" TextColor="Black"/>
+                        <ImageButton Grid.Column="2" WidthRequest="60" BackgroundColor="Transparent" Source="esquinaico.png"                                      
+                   VerticalOptions="Center"
+                    HorizontalOptions="Start">
+                        </ImageButton>
+                    </Grid>
+                </StackLayout>
+
+            </Frame>
+
+            <ScrollView  Grid.Row="1" >
+                <StackLayout  Padding="10,10,10,10" >
+                    <Frame BackgroundColor="#d5cacb" CornerRadius="20" >
+                       <StackLayout>
+                        <Grid Padding="0, 0, 0, 0">
+                            <Grid.ColumnDefinitions>                            
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="240"/>
+                               
+                            </Grid.RowDefinitions>
+
+                            <StackLayout Grid.Row="0" Grid.Column="0">
+                                <Label  x:Name="Venta1" Padding="10,0,0,0"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="Ingresos" BackgroundColor="#d5cacb" FontFamily="Century Gothic.TTF" FontSize="16" TextColor="Black"/>
+                                <Label  x:Name="Venta1" Padding="10,0,0,0"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="3000 eu" BackgroundColor="#d5cacb" FontFamily="Century Gothic.TTF" FontSize="16" TextColor="Black"/>
+                                <Image Source="flechasubidaverde.png" HeightRequest="45" BackgroundColor="#d5cacb"></Image>
+                            </StackLayout>
+                            <StackLayout BackgroundColor="#d5cacb" Grid.Row="0" Grid.Column="1">
+                                <Label Text="BarChart"  FontSize="14" FontAttributes="Bold" TextColor="White" />
+                                <microcharts:ChartView Chart="{Binding BarChartSample}"  HeightRequest="210" />
+                            </StackLayout>
+                        </Grid>
+                    </StackLayout>  
+                    </Frame>
+                    <Frame BackgroundColor="#d5cacb" CornerRadius="20">
+                       <StackLayout>
+                        <Grid Padding="0, 0, 0, 0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="240"/>
+
+                            </Grid.RowDefinitions>
+
+                            <StackLayout Grid.Row="0" Grid.Column="0" >
+                                <Label  x:Name="Venta1" Padding="10,30,0,0"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="Gastos"  FontFamily="Century Gothic.TTF" FontSize="16" TextColor="Black"/>
+                                <Label  x:Name="Venta1" Padding="10,0,0,0"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="3000 eu"  FontFamily="Century Gothic.TTF" FontSize="16" TextColor="Black"/>
+                                <Image Source="flechabajadarojo.png" HeightRequest="45"></Image>
+                            </StackLayout>
+                            <StackLayout BackgroundColor="#white" Grid.Row="0" Grid.Column="1">
+                                <Label Text="LineChart" FontSize="14" FontAttributes="Bold" TextColor="White" />
+                                <microcharts:ChartView Chart="{Binding LineChartSample}" HeightRequest="210" />
+                            </StackLayout>
+                        </Grid>
+                    </StackLayout>  
+                    </Frame>
+                    <Frame BackgroundColor="#d5cacb" CornerRadius="20">
+                        <StackLayout>
+                            <Grid Padding="0, 0, 0, 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="240"/>
+
+                                </Grid.RowDefinitions>
+
+                                <StackLayout Grid.Row="0" Grid.Column="0" >
+                                    <Label  x:Name="Venta1" Padding="10,30,0,0"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="Beneficios" BackgroundColor="#c7bdba" FontFamily="Century Gothic.TTF" FontSize="16" TextColor="Black"/>
+                                    <Label  x:Name="Venta1" Padding="10,0,0,0"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="-3000 eu" BackgroundColor="#c7bdba" FontFamily="Century Gothic.TTF" FontSize="16" TextColor="Black"/>
+                                    <Image Source="flechasubidaverde.png" HeightRequest="45"></Image>
+                                </StackLayout>
+                                <StackLayout BackgroundColor="#white" Grid.Row="0" Grid.Column="1">
+                                    <Label Text="PointChart" FontSize="14" FontAttributes="Bold" TextColor="White" />
+                                    <microcharts:ChartView Chart="{Binding PointChartSample}" HeightRequest="210" />
+                                </StackLayout>
+                            </Grid>
+                        </StackLayout>
+                    </Frame>            
+           
+
+                   
+                    </StackLayout>  
+            </ScrollView>
+
+            
+      
+
+        </Grid>
+       
+            
     </ContentPage.Content>
 </ContentPage>
