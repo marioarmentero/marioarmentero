@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="aicogestnew.Views.DocumentosScanner">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Button x:Name="scannerpdf" Text="Escanear Facturas desde pdf"></Button>
+            <Button x:Name="scannerImagen" Text="Escanear Facturas desde imagen"></Button>
+            <ListView x:Name="jugadores">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="ESCANEAR DOCUMENTOS" TextColor="Red"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

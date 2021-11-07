@@ -2,11 +2,11 @@
 <Shell xmlns="http://xamarin.com/schemas/2014/forms" 
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:aicogestnew.Views"
+       xmlns:customviews="clr-namespace:aicogestnew.Views.Vendors_Documents"
        Title="Aicoffi"
-       x:Class="aicogestnew.AppShell">
-    <Shell.FlyoutHeader>
-        <local:FlyoutHeader/>
-    </Shell.FlyoutHeader>
+       x:Class="aicogestnew.AppShell" 
+       Shell.NavBarIsVisible="False">
+
     <TabBar>        
         <Tab Title="Home"
             Icon="inicio.png">
@@ -22,7 +22,7 @@
         </Tab>
         <Tab Title="Contacto"
             Icon="contactos.png">
-            <ShellContent Title="Contactos" ContentTemplate="{DataTemplate local:Empresas}" Shell.TabBarBackgroundColor="#306eb5" Shell.TabBarTitleColor="Yellow"  />
+            <ShellContent Title="Contactos" ContentTemplate="{DataTemplate local:DocumentosScanner}" Shell.TabBarBackgroundColor="#306eb5" Shell.TabBarTitleColor="Yellow"  />
         </Tab>
         <Tab Title="Más"
             Icon="mas.png">

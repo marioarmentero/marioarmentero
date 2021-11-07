@@ -10,14 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace aicogestnew.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HomePage : ContentPage
+    public partial class DocumentosScanner : ContentPage
     {
-        public HomePage()
+        public DocumentosScanner()
         {
             InitializeComponent();
-             
-
-            BindingContext = new ViewModel.DisplayChartViewModel();
         }
     }
 }

@@ -2,14 +2,17 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="aicogestnew.Views.HomePage"
-             xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms">
+             xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"             
+              Title="Home" >
     <ContentPage.Content>
-        <Grid Padding="5, 10, 10, 10" BackgroundColor="#c1b7b4">
+        <Grid Padding="5, 10, 10, 10">
             <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Frame Grid.Row="0" Padding="0, 10, 10, 0" BackgroundColor="#c7bdba" CornerRadius="20">
+            <Frame x:Name="Cabecera" Grid.Row="0" Padding="0, 0, 0, 0" BackgroundColor="#c7bdba" CornerRadius="20">
                 <StackLayout>
                     <Grid Padding="0, 0, 0, 0">
                         <Grid.ColumnDefinitions>
@@ -18,7 +21,8 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="40"/>
+                           
                         </Grid.RowDefinitions>
                         <ImageButton Grid.Column="0" WidthRequest="60" BackgroundColor="Transparent" Source="vabowlico.png"                                      
                    VerticalOptions="Center"
@@ -30,12 +34,34 @@
                    VerticalOptions="Center"
                     HorizontalOptions="Start">
                         </ImageButton>
+                        
                     </Grid>
                 </StackLayout>
 
             </Frame>
+            <Frame x:Name="Calendario" Grid.Row="2" Padding="0, 0, 0, 0" BackgroundColor="#c7bdba" CornerRadius="20">
+                <StackLayout>
+                    <Grid Padding="0, 0, 0, 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="80"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40"/>
 
-            <ScrollView  Grid.Row="1" >
+                        </Grid.RowDefinitions>
+                        <ImageButton Grid.Column="0" WidthRequest="60" BackgroundColor="Transparent" Source="menosico.png" VerticalOptions="Center" HorizontalOptions="Start"/>
+                        <ImageButton Grid.Column="1" WidthRequest="60" BackgroundColor="Transparent" Source="ruedaico.png" VerticalOptions="Center" HorizontalOptions="Start"/>
+                        <DatePicker MinimumDate="01/01/2018" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center" MaximumDate="12/31/2018" Format="D" Margin="0, 0, 0, 0"/>
+       
+                    </Grid>
+                </StackLayout>   
+            </Frame>
+            <Frame Grid.Row="1" x:Name="Mensajes" Padding="10, 0, 0, 0" HeightRequest="50" BackgroundColor="#306eb5" CornerRadius="20">
+                <Label Text="Toda la gloria del mundo cabe en un grano de maiz. José Martí" TextColor="White" FontSize="20"></Label>
+            </Frame>
+            <ScrollView  Grid.Row="3" >
                 <StackLayout  Padding="10,10,10,10" >
                     <Frame BackgroundColor="#d5cacb" CornerRadius="20" >
                        <StackLayout>
@@ -50,8 +76,7 @@
                             </Grid.RowDefinitions>
 
                             <StackLayout Grid.Row="0" Grid.Column="0">
-                                <Label  x:Name="Venta1" Padding="10,0,0,0"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="Ingresos" BackgroundColor="#d5cacb" FontFamily="Century Gothic.TTF" FontSize="16" TextColor="Black"/>
-                                <Label  x:Name="Venta1" Padding="10,0,0,0"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="3000 eu" BackgroundColor="#d5cacb" FontFamily="Century Gothic.TTF" FontSize="16" TextColor="Black"/>
+                                <Label  x:Name="Venta" Padding="10,0,0,0"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="Ingresos" BackgroundColor="#d5cacb" FontFamily="Century Gothic.TTF" FontSize="16" TextColor="Black"/>                                
                                 <Image Source="flechasubidaverde.png" HeightRequest="45" BackgroundColor="#d5cacb"></Image>
                             </StackLayout>
                             <StackLayout BackgroundColor="#d5cacb" Grid.Row="0" Grid.Column="1">
@@ -75,7 +100,6 @@
 
                             <StackLayout Grid.Row="0" Grid.Column="0" >
                                 <Label  x:Name="Venta1" Padding="10,30,0,0"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="Gastos"  FontFamily="Century Gothic.TTF" FontSize="16" TextColor="Black"/>
-                                <Label  x:Name="Venta1" Padding="10,0,0,0"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="3000 eu"  FontFamily="Century Gothic.TTF" FontSize="16" TextColor="Black"/>
                                 <Image Source="flechabajadarojo.png" HeightRequest="45"></Image>
                             </StackLayout>
                             <StackLayout BackgroundColor="#white" Grid.Row="0" Grid.Column="1">
@@ -98,8 +122,7 @@
                                 </Grid.RowDefinitions>
 
                                 <StackLayout Grid.Row="0" Grid.Column="0" >
-                                    <Label  x:Name="Venta1" Padding="10,30,0,0"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="Beneficios" BackgroundColor="#c7bdba" FontFamily="Century Gothic.TTF" FontSize="16" TextColor="Black"/>
-                                    <Label  x:Name="Venta1" Padding="10,0,0,0"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="-3000 eu" BackgroundColor="#c7bdba" FontFamily="Century Gothic.TTF" FontSize="16" TextColor="Black"/>
+                                    <Label  x:Name="Cobros1" Padding="10,30,0,0"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="Beneficios" BackgroundColor="#c7bdba" FontFamily="Century Gothic.TTF" FontSize="16" TextColor="Black"/>                                   
                                     <Image Source="flechasubidaverde.png" HeightRequest="45"></Image>
                                 </StackLayout>
                                 <StackLayout BackgroundColor="#white" Grid.Row="0" Grid.Column="1">
