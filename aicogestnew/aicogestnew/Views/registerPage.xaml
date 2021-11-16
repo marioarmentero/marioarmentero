@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="aicogestnew.Views.registerPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#c7bdba">
+
+            <Grid Padding="30, 30, 30, 5" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" BackgroundColor="#c7bdba">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="40"/>
+
+                </Grid.RowDefinitions>
+                <Label  x:Name="lblTitle" Padding="0,0,0,0" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Start"  Text="   Crear cuenta nueva" BackgroundColor="#c7bdba" FontFamily="Century Gothic.TTF" FontSize="30" TextColor="Black"/>
+
+                <Frame Padding="5,1,1,1" Grid.Row="1" Grid.Column="0" BorderColor="White" BackgroundColor="#c7bdba"  CornerRadius="6" VerticalOptions="Fill">
+
+                    <Entry  x:Name="txtEmail"  Placeholder="Introducir Email" VerticalTextAlignment="Center" BackgroundColor="#c7bdba" PlaceholderColor="White" Style="{StaticResource NormalFont}" FontSize="20" TextColor="Black"/>
+                </Frame>
+
+                <Frame Padding="5,1,1,1" Grid.Row="2" Grid.Column="0" BorderColor="White" BackgroundColor="#c7bdba"  CornerRadius="6">
+                    <Entry x:Name="txtPass"  Placeholder="Password" PlaceholderColor="White" VerticalTextAlignment="Center" BackgroundColor="#c7bdba"  Style="{StaticResource NormalFont}" FontSize="20" TextColor="Black"/>
+                </Frame>
+                <Frame Padding="5,1,1,1" Grid.Row="4" Grid.Column="0" BorderColor="White" BackgroundColor="#d5cacb"  CornerRadius="20">
+                    <Button  Padding="40,10,10,10" Grid.Column="0" x:Name="btnRegister" CornerRadius="20" Text="Crear Cuenta" BackgroundColor="#d5cacb" FontSize="18" TextColor="#6b6969" Style="{StaticResource NormalFont}" />
+                </Frame>
+
+
+                <Label  x:Name="lblrecuperar" Padding="0,0,0,0" Grid.Row="6" Grid.Column="0" VerticalTextAlignment="Start"  Text="Al crear la cuenta acepta la politca de privacidad y los terminos y condiciones" BackgroundColor="#c7bdba" FontFamily="Century Gothic.TTF" FontSize="20" TextColor="Black"/>
+
+                <Frame Padding="5,1,1,1" Grid.Row="8" Grid.Column="0" BorderColor="White" BackgroundColor="#d5cacb"  CornerRadius="20">
+                    <Button  Padding="40,10,10,10" Grid.Column="0" x:Name="btnLogin" CornerRadius="20" Text="Usuario existente"  FontSize="15" TextColor="Black" Style="{StaticResource NormalFont}" Clicked="BtnRegister_Clicked"/>
+                </Frame>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

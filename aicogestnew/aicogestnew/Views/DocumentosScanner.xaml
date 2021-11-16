@@ -15,6 +15,7 @@
                 <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
                     <Image x:Name="imgBanner"></Image>
                     <Image x:Name="imgChoosed" HeightRequest="300"></Image>
+                    <Editor Text="" x:Name="txtCaptura" BackgroundColor="White" TextColor="Blue" HeightRequest="100" />
                     <Grid Padding="0, 5, 0, 5" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>

@@ -80,36 +80,13 @@ namespace aicogestnew.Views
                     {
                         foreach (Line line in page.Lines)
                         {
-                            Console.WriteLine(line.Text);
+                            txtCaptura.Text = txtCaptura.Text + line.Text + Environment.NewLine;
                         }
                     }
 
 
                     file.Dispose();
-
-                    /* var result = await Predict(file.GetStream());
-                     file.Dispose();
-                     List<Profes> MiListAdiv = new List<Profes>();
-
-
-                     foreach (Prediction va in result.predictions)
-                     {
-                         // lblResult.Text = lblResult.Text + "\n" + va.tagName + " Probabilidad " + va.probability.ToString("#0.##%"); ;
-                         if ((va.probability * 100) > 10)
-                         {
-                             Profes _Profes = new Profes
-                             {
-                                 tagname = va.tagName,
-                                 probability = va.probability.ToString("#0.##%") + " de Coincidencia"
-                             };
-                             MiListAdiv.Add(_Profes);
-                         }
-                     }
-                     listView2.ItemsSource = MiListAdiv;
-                     if (MiListAdiv.Count == 0)
-                     {
-                         await DisplayAlert("Info", "No hay resultados validos para la imagen", "OK");
-                     }*/
+           
 
                 }
                 catch (Exception ex)
@@ -141,32 +118,39 @@ namespace aicogestnew.Views
                         return stream;
                     });
 
+                    var cliente = Authenticate(endpoint, subscriptionKey);
 
-                    /*
-                    var result = await Predict(file.GetStream());
-                    file.Dispose();
-                    List<Profes> MiListAdiv = new List<Profes>();
+                    var textHeaders = await cliente.ReadInStreamAsync(file.GetStream());
 
-                    foreach (Prediction va in result.predictions)
+                    string operationLocation = textHeaders.OperationLocation;
+
+                    const int numberOfCharsInOperationId = 36;
+                    string operationId = operationLocation.Substring(operationLocation.Length - numberOfCharsInOperationId);
+
+                    // Extract the text
+                    ReadOperationResult results;
+                    // Console.WriteLine($"Extracting text from URL file {Path.GetFileName(urlFile)}...");
+                    // Console.WriteLine();
+                    do
                     {
-                        if ((va.probability * 100) > 10)
-                        {
-                            Profes _Profes = new Profes
-                            {
-                                tagname = va.tagName,
-                                probability = va.probability.ToString("#0.##%") + " de Coincidencia"
-                            };
-                            MiListAdiv.Add(_Profes);
-                        }
-
-                        //   lblResult.Text = lblResult.Text + "\n" + va.tagName + " Probabilidad " + va.probability.ToString("#0.##%");
+                        results = await cliente.GetReadResultAsync(Guid.Parse(operationId));
                     }
-                    
-                    listView2.ItemsSource = MiListAdiv;
-                    if (MiListAdiv.Count == 0)
+                    while ((results.Status == OperationStatusCodes.Running ||
+                        results.Status == OperationStatusCodes.NotStarted));
+
+                    var textUrlFileResults = results.AnalyzeResult.ReadResults;
+                    foreach (ReadResult page in textUrlFileResults)
                     {
-                        await DisplayAlert("Info", "No hay resultados validos para la imagen", "OK");
-                    }*/
+                        foreach (Line line in page.Lines)
+                        {
+                            txtCaptura.Text = txtCaptura.Text + line.Text + Environment.NewLine;
+                           // Console.WriteLine(line.Text);
+                        }
+                    }
+
+
+                    file.Dispose();
+
                 }
                 catch (Exception ex)
                 {

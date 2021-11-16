@@ -14,7 +14,9 @@ namespace aicogestnew
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new AppShell();
+
+            //MainPage = new AppShell();
+            MainPage = new LoginShell();
         }
 
         protected override void OnStart()
