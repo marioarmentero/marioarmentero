@@ -20,8 +20,9 @@ namespace aicogestnew.Views
         }
         private void BtnRegister_Clicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
-          //  Navigation.PushAsync(new registerPage());
+            DisplayAlert("Mensaje", "Registro no implementado", "OK");
+            //  throw new NotImplementedException();
+            //  Navigation.PushAsync(new registerPage());
         }
 
         private void BtnLogin_Clicked(object sender, EventArgs e)
@@ -35,15 +36,14 @@ namespace aicogestnew.Views
                 Email = txtEmail.Text,
                 Password = txtPass.Text
             };
-            if ((log.Email == "vabowl") & (log.Password == "123"))
+            if ((log.Email == "vabowl") & (log.Password == "vabowl"))
             {
                 Application.Current.MainPage = new AppShell();
-                //  var Mipage = new AppShell();
-                //   await Shell.Current.GoToAsync($"//{nameof(AppShell)}");
+               
             }
             else
             {
-                DisplayAlert("Fail", "Contraseña Incorrecta", "OK");
+                DisplayAlert("Error", "Contraseña Incorrecta", "OK");
             }
 
 
