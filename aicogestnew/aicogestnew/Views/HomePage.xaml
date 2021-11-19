@@ -13,7 +13,7 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Frame x:Name="Cabecera" Grid.Row="0" Padding="0, 0, 0, 0" BackgroundColor="#c7bdba" CornerRadius="20">
+            <Frame x:Name="Cabecera" Grid.Row="0" Padding="0, 0, 0, 0" BackgroundColor="#c7bdba" CornerRadius="8">
                 <StackLayout>
                     <Grid Padding="0, 0, 0, 0">
                         <Grid.ColumnDefinitions>
@@ -33,14 +33,14 @@
                         <Label  x:Name="l2" Padding="10,0,0,0" Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center"  Text="Vabowl Fanny Foods Sl." BackgroundColor="#c7bdba" FontFamily="Century Gothic.TTF" FontSize="20" TextColor="Black"/>
                         <ImageButton Grid.Column="2" WidthRequest="60" BackgroundColor="Transparent" Source="esquinaico.png"                                      
                    VerticalOptions="Center"
-                    HorizontalOptions="Start">
+                    HorizontalOptions="End">
                         </ImageButton>
                         
                     </Grid>
                 </StackLayout>
 
             </Frame>
-            <Frame x:Name="Calendario" Grid.Row="2" Padding="0, 0, 0, 0" BackgroundColor="#c7bdba" CornerRadius="20">
+            <Frame x:Name="Calendario" Grid.Row="2" Padding="0, 0, 0, 0" BackgroundColor="#c7bdba" CornerRadius="8">
                 <StackLayout>
                     <Grid Padding="0, 0, 0, 0">
                         <Grid.ColumnDefinitions>
@@ -59,12 +59,12 @@
                     </Grid>
                 </StackLayout>   
             </Frame>
-            <Frame Grid.Row="1" x:Name="Mensajes" Padding="10, 0, 0, 0" HeightRequest="50" BackgroundColor="#306eb5" CornerRadius="20">
+            <Frame Grid.Row="1" x:Name="Mensajes" Padding="10, 0, 0, 0" HeightRequest="50" BackgroundColor="Blue" CornerRadius="8">
                 <Label Text="Toda la gloria del mundo cabe en un grano de maiz. José Martí" TextColor="White" FontSize="20"></Label>
             </Frame>
             <ScrollView  Grid.Row="3" >
-                <StackLayout  Padding="10,10,10,10" >
-                    <Frame BackgroundColor="#d5cacb" CornerRadius="20" >
+                <StackLayout  Padding="0,0,0,0" >
+                    <Frame BackgroundColor="#d5cacb" CornerRadius="8" >
                        <StackLayout>
                         <Grid Padding="0, 0, 0, 0">
                             <Grid.ColumnDefinitions>                            
@@ -87,7 +87,7 @@
                         </Grid>
                     </StackLayout>  
                     </Frame>
-                    <Frame BackgroundColor="#d5cacb" CornerRadius="20">
+                    <Frame BackgroundColor="#d5cacb" CornerRadius="8">
                        <StackLayout>
                         <Grid Padding="0, 0, 0, 0">
                             <Grid.ColumnDefinitions>
@@ -110,7 +110,7 @@
                         </Grid>
                     </StackLayout>  
                     </Frame>
-                    <Frame BackgroundColor="#d5cacb" CornerRadius="20">
+                    <Frame BackgroundColor="#d5cacb" CornerRadius="8">
                         <StackLayout>
                             <Grid Padding="0, 0, 0, 0">
                                 <Grid.ColumnDefinitions>
