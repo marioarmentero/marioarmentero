@@ -17,7 +17,7 @@ namespace aicogestnew.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            System.Threading.Thread.Sleep(200);
+            System.Threading.Thread.Sleep(1500);
             StartActivity(typeof(MainActivity));
             // Create your application here
         }
