@@ -5,11 +5,12 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="aicogestnew.Views.LoginPage"
-             Shell.NavBarIsVisible="False"
+             xmlns:local="clr-namespace:aicogestnew"
+             Shell.NavBarIsVisible="False"                       
              Shell.FlyoutBehavior="Disabled">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#c7bdba">
-            <Grid Padding="30, 30, 30, 5" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" BackgroundColor="#c7bdba">
+        <StackLayout>
+            <Grid Padding="30, 50, 30, 80" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" BackgroundColor="#c7bdba" >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
@@ -19,26 +20,30 @@
                     <RowDefinition Height="60"/>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="50"/>
-                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="80"/>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="90"/>
                     <RowDefinition Height="40"/>
 
                 </Grid.RowDefinitions>
-                 <Label  x:Name="lblTitle" Padding="0,0,0,0" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Start"  Text="   Inicio de sesión" BackgroundColor="#c7bdba" FontFamily="Century Gothic.TTF" FontSize="30" TextColor="Black"/>
+                <Label  x:Name="lblTitle" Padding="0,0,0,0" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Start"  Text="   Inicio de sesión" BackgroundColor="#c7bdba" FontFamily="Gothic" FontSize="30" TextColor="Black"/>
                 <Frame Padding="5,1,1,1" Grid.Row="1" Grid.Column="0" BorderColor="White" BackgroundColor="#c7bdba"  CornerRadius="10" VerticalOptions="Fill">
-                    <Entry  x:Name="txtEmail"   Placeholder="Introducir Email" VerticalTextAlignment="Center" BackgroundColor="#c7bdba" PlaceholderColor="White" Style="{StaticResource NormalFont}" FontSize="20" TextColor="Black"/>
+                    <local:ImageEntry x:Name="txtEmail" Image="carta" ImageWidth="30" ImageHeight="30" Placeholder="Introducir Email" VerticalTextAlignment="Center" BackgroundColor="#c7bdba" PlaceholderColor="White" FontFamily="Gothic" FontSize="20" TextColor="Black"/>                    
                 </Frame>
                 <Frame Padding="5,1,1,1" Grid.Row="2" Grid.Column="0" BorderColor="White" BackgroundColor="#c7bdba"  CornerRadius="6">
-                    <Entry x:Name="txtPass"  Placeholder="Password" IsPassword="True" PlaceholderColor="White" VerticalTextAlignment="Center" BackgroundColor="#c7bdba"  Style="{StaticResource NormalFont}" FontSize="20" TextColor="Black"/>
+                    <local:ImageEntry x:Name="txtPass" IsPassword="True" Image="lupa1" Placeholder="Password" ImageWidth="30" ImageHeight="30"  VerticalTextAlignment="Center" BackgroundColor="#c7bdba" PlaceholderColor="White" FontFamily="Gothic" FontSize="20" TextColor="Black"/>
+                   
                 </Frame>
                 <Frame Padding="5,1,1,1" Grid.Row="4" Grid.Column="0" BorderColor="White" BackgroundColor="#d5cacb"  CornerRadius="20">
-                    <Button  Padding="40,10,10,10" Grid.Column="0" x:Name="btnLogin" CornerRadius="20" Text="Iniciar Sesión" BackgroundColor="#d5cacb" FontSize="18" TextColor="#6b6969" Style="{StaticResource NormalFont}" Clicked="BtnLogin_Clicked"/>
+                    <Button  Padding="40,10,10,10" x:Name="btnLogin" WidthRequest="60" CornerRadius="20" Text="Iniciar Sesión" BackgroundColor="#d5cacb" FontSize="18" TextColor="#6b6969" FontFamily="GOTHIC" Clicked="BtnLogin_Clicked"/>
                 </Frame>
-                <Label  x:Name="lblrecuperar" Padding="0,0,0,0" Grid.Row="6" Grid.Column="0" VerticalTextAlignment="Start"  Text="   Recuperar contraseña" BackgroundColor="#c7bdba" FontFamily="Century Gothic.TTF" FontSize="20" TextColor="Black"/>
+                <Frame Padding="0,50,1,1" Grid.Row="5" Grid.Column="0"  HasShadow="False"  BackgroundColor="Transparent">
+                    <Label  x:Name="lblrecuperar" Padding="0,0,0,0" Grid.Row="6" Grid.Column="0"  VerticalTextAlignment="Start"  Text="   Recuperar contraseña"  FontFamily="Gothic" FontSize="20" TextColor="Black"/>
+                </Frame>
+                
 
-                <Frame Padding="5,1,1,1" Grid.Row="8" Grid.Column="0" BorderColor="White" BackgroundColor="#d5cacb"  CornerRadius="20">
-                    <Button  Padding="40,10,10,10" Grid.Column="0" x:Name="btnRegister" CornerRadius="20" Text="Registrar nuevo usuario"  FontSize="15" TextColor="Black" Style="{StaticResource NormalFont}" Clicked="BtnRegister_Clicked"/>
+                <Frame Padding="5,1,1,1" Grid.Row="8" Grid.Column="0" BorderColor="White" HasShadow="False" BackgroundColor="#d5cacb"  CornerRadius="20">
+                    <Button  Padding="40,10,10,10" Grid.Column="0" x:Name="btnRegister" CornerRadius="20" Text="Registrar nuevo usuario"  FontSize="15" TextColor="Black" FontFamily="Gothic" Clicked="BtnRegister_Clicked"/>
                 </Frame>
             </Grid>
         </StackLayout>

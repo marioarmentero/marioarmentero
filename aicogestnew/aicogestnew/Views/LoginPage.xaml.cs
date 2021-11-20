@@ -1,4 +1,5 @@
 ﻿using aicogestnew.Models;
+using aicogestnew.Services;
 using aicogestnew.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -20,9 +21,9 @@ namespace aicogestnew.Views
         }
         private void BtnRegister_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Mensaje", "Registro no implementado", "OK");
+           // DisplayAlert("Mensaje", "Registro no implementado", "OK");
             //  throw new NotImplementedException();
-            //  Navigation.PushAsync(new registerPage());
+            Navigation.PushAsync(new registerPage());
         }
 
         private void BtnLogin_Clicked(object sender, EventArgs e)
@@ -36,7 +37,7 @@ namespace aicogestnew.Views
                 Email = txtEmail.Text,
                 Password = txtPass.Text
             };
-            if ((log.Email == "vabowl") & (log.Password == "vabowl"))
+            if (IsLogged(log))
             {
                 Application.Current.MainPage = new AppShell();
                
@@ -51,6 +52,16 @@ namespace aicogestnew.Views
             //DisplayAlert("OK", "Subscripción realizada", "OK");
             // Navigation.PushAsync(new registerPage());
             //  throw new NotImplementedException();
+        }
+
+        private bool IsLogged(Login _login)
+        {
+            Company servicio = new Company();
+          //  var Res = servicio.Login(_login.Email, _login.Password);
+
+           if ((_login.Email=="vabowl") & (_login.Password=="vabowl"))
+                    { return true; } else { return false; }
+        
         }
 
        

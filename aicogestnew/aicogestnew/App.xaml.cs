@@ -14,6 +14,7 @@ namespace aicogestnew
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
+            DependencyService.Register<Company>();
 
             //MainPage = new AppShell();
             MainPage = new LoginShell();

@@ -10,46 +10,7 @@
             <Style TargetType="Label">
                 <Setter Property="FontSize" Value="Large"/>
                 <Setter Property="HorizontalOptions" Value="Center"/>
-            </Style>
-
-            <Style x:Key="NormalFont" TargetType="Label">
-                <Setter Property="FontFamily" Value="Century Gothic.TTF#GOTHIC.TTF"/>
-            </Style>
-            <Style x:Key="BoldFont" TargetType="Label">
-                <Setter Property="FontFamily" Value="GOTHICB.TTF#GOTHICB.TTF"/>
-            </Style>
-            <Style x:Key="ItalicFont" TargetType="Label">
-                <Setter Property="FontFamily" Value="GOTHICBI.TTF#GOTHICBI.TTF"/>
-            </Style>
-
-            <ResourceDictionary>
-                <OnPlatform x:TypeArguments="x:String" 
- x:Key="FontAwesomeBrands">
-                    <On Platform="Android" 
- Value="fabrands.otf#Regular" />
-                    <On Platform="iOS" 
- Value="FontAwesome5Brands-Regular" />
-                </OnPlatform>
-
-                <OnPlatform x:TypeArguments="x:String" 
- x:Key="FontAwesomeSolid">
-                    <On Platform="Android" 
- Value="fasolid.otf#Regular" />
-                    <On Platform="iOS" 
- Value="FontAwesome5Free-Solid" />
-                </OnPlatform>
-
-                <OnPlatform x:TypeArguments="x:String" 
- x:Key="FontAwesomeRegular">
-                    <On Platform="Android" 
- Value="faregular.otf#Regular" />
-                    <On Platform="iOS" 
- Value="FontAwesome5Free-Regular" />
-                </OnPlatform>
-            </ResourceDictionary>
-
-
-
+            </Style> 
         </ResourceDictionary>        
     </Application.Resources>
 </Application>
