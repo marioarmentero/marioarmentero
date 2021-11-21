@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.AttributeValidation;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -26,6 +27,8 @@ namespace aicogestnew.Views
 
         private async void BtnLogin_Clicked(object sender, EventArgs e)
         {
+           // var isValid = await this.ValidateAsync();
+
             Company services = new Company();
             var getLoginDetails = await services.CheckLoginIfExists(txtEmail.Text, txtPass.Text);
 
@@ -36,15 +39,12 @@ namespace aicogestnew.Views
             else
             {
                 await DisplayAlert("Login failed", "Username or Password is incorrect or not exists", "Okay", "Cancel");
-            }    
-            
-
-
-          
+            }
         }
+    }
 
         
 
        
-    }
+    
 }

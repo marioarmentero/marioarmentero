@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 namespace aicogestnew.Services
 {
     public interface ICompany
-    {
-       Task<Login> Login(string login, string password);
+    {       
        Task<bool> CheckLoginIfExists(string login, string password);
+        Task<bool> CheckUserExists(string login);
+        Task<bool> AddItemAsync(Login _usuario);
     }
 }
