@@ -11,6 +11,7 @@ namespace aicogestnew.Services
 {
     class Company : ICompany
     {
+        RestClient<Login> _restClient = new RestClient<Login>();
         public async Task<Login> Login(string login, string password)
         {
             try
@@ -46,6 +47,14 @@ namespace aicogestnew.Services
             }
            
             
+        }              
+
+        // Boolean function with the following parameters of username & password.
+        public async Task<bool> CheckLoginIfExists(string username, string password)
+        {
+            var check = await _restClient.checkLogin(username, password);
+
+            return check;
         }
     }
 }

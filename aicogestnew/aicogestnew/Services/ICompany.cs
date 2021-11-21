@@ -9,5 +9,6 @@ namespace aicogestnew.Services
     public interface ICompany
     {
        Task<Login> Login(string login, string password);
+       Task<bool> CheckLoginIfExists(string login, string password);
     }
 }
